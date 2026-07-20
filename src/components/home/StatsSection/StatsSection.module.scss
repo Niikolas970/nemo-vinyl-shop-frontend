@@ -1,0 +1,41 @@
+@use '@/styles/abstracts' as *;
+
+.section {
+  padding-block: $space-xl;
+  border-block: 1px solid $color-border;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $space-md;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $space-lg;
+  }
+}
+
+.stat {
+  @include fade-in-up(600ms);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: $space-xs;
+}
+
+.value {
+  font-size: $fs-2xl;
+  font-weight: $fw-extrabold;
+  color: $color-brand-primary;
+
+  @include mobile {
+    font-size: $fs-xl;
+  }
+}
+
+.label {
+  font-size: $fs-sm;
+  color: $color-text-secondary;
+}

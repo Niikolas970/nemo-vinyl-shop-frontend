@@ -1,0 +1,41 @@
+@use '@/styles/abstracts' as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: $z-header;
+}
+
+.inner {
+  @include flex(row, center, space-between);
+  // Padding compensado para que el logo crezca sin alterar la altura total del header.
+  padding-block: 9px;
+
+  @include tablet {
+    padding-block: 11px;
+  }
+
+  @include mobile {
+    padding-block: 13px;
+  }
+}
+
+.brand {
+  @include flex(row, center, flex-start);
+  line-height: 0;
+}
+
+.logo {
+  display: block;
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+
+  @include tablet {
+    height: 48px;
+  }
+
+  @include mobile {
+    height: 43px;
+  }
+}

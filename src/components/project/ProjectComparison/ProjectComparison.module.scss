@@ -1,0 +1,57 @@
+@use '@/styles/abstracts' as *;
+
+.comparison {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+}
+
+.frame {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  border: 1px solid $color-border;
+  background-color: $color-bone-alt;
+}
+
+.imageBase,
+.imageOverlay {
+  @include flex(row, center, center);
+  position: absolute;
+  inset: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.placeholderIcon {
+  color: $color-gray-300;
+}
+
+.label {
+  position: absolute;
+  top: $space-sm;
+  padding: 0.3rem 0.8rem;
+  border-radius: $radius-full;
+  font-size: $fs-xs;
+  font-weight: $fw-semibold;
+  background-color: rgba($color-white-pure, $opacity-10);
+  color: $color-text-primary;
+}
+
+.labelBefore {
+  left: $space-sm;
+}
+
+.labelAfter {
+  right: $space-sm;
+}
+
+.slider {
+  width: 100%;
+  accent-color: $color-brand-primary;
+}

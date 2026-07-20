@@ -1,0 +1,56 @@
+@use '../abstracts' as *;
+
+body {
+  font-family: $font-primary;
+  font-size: $fs-base;
+  font-weight: $fw-regular;
+  color: $color-text-primary;
+  background-color: $color-bg;
+  background-image:
+    radial-gradient(48% 40% at 88% 4%, rgba($color-fucsia, $opacity-2), transparent),
+    radial-gradient(48% 40% at 6% 96%, rgba($color-purple, $opacity-1), transparent);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: $fw-bold;
+  line-height: $lh-tight;
+  letter-spacing: $ls-tight;
+}
+
+h1 {
+  font-size: $fs-3xl;
+
+  @include tablet {
+    font-size: $fs-2xl;
+  }
+
+  @include mobile {
+    font-size: $fs-xl;
+  }
+}
+
+h2 {
+  font-size: $fs-2xl;
+
+  @include tablet {
+    font-size: $fs-xl;
+  }
+
+  @include mobile {
+    font-size: $fs-lg;
+  }
+}
+
+h3 {
+  font-size: $fs-lg;
+}
+
+p {
+  color: $color-text-secondary;
+  line-height: $lh-relaxed;
+}

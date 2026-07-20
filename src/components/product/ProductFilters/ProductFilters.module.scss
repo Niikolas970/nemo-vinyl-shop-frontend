@@ -1,0 +1,26 @@
+@use '@/styles/abstracts' as *;
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+  padding: $space-md;
+  margin-bottom: $space-lg;
+  border-radius: $radius-lg;
+  background-color: $color-bone-alt;
+  border: 1px solid $color-border;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+}
+
+.label {
+  font-size: $fs-xs;
+  font-weight: $fw-semibold;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $color-text-secondary;
+}

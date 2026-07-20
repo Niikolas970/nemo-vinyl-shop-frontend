@@ -1,0 +1,61 @@
+@use '@/styles/abstracts' as *;
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+  margin-top: $space-md;
+  padding: $space-md;
+  border-radius: $radius-lg;
+  background-color: $color-bone-alt;
+  border: 1px solid $color-border;
+}
+
+.breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+}
+
+.row {
+  @include flex(row, center, space-between);
+  font-size: $fs-sm;
+  color: $color-text-secondary;
+
+  strong {
+    color: $color-text-primary;
+    font-weight: $fw-semibold;
+  }
+}
+
+.total {
+  @include flex(row, center, space-between);
+  padding-top: $space-sm;
+  border-top: 1px solid $color-border;
+  font-size: $fs-md;
+
+  strong {
+    font-size: $fs-lg;
+    color: $color-brand-primary;
+  }
+}
+
+.helper {
+  font-size: $fs-xs;
+  color: $color-text-secondary;
+}
+
+.buttons {
+  @include flex(row, center, flex-start, $space-sm);
+  flex-wrap: wrap;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.note {
+  font-size: $fs-xs;
+  color: $color-gray-300;
+}

@@ -1,0 +1,15 @@
+@use '@/styles/abstracts' as *;
+
+.section {
+  @include flex(column, center, center, $space-md);
+  margin-top: $space-2xl;
+  padding: $space-xl;
+  border-radius: $radius-lg;
+  text-align: center;
+  background: linear-gradient(135deg, $color-fucsia-dark, $color-purple 85%);
+}
+
+.title {
+  color: $color-white-pure;
+  margin: 0;
+}

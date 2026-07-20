@@ -1,0 +1,12 @@
+@use '@/styles/abstracts' as *;
+
+.text-center {
+  text-align: center;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, $color-fucsia, $color-purple);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,27 @@
+@use '@/styles/abstracts' as *;
+
+.wrapper {
+  @include flex(row, center, flex-start, $space-xs);
+  padding: 0.85rem $space-md;
+  border-radius: $radius-full;
+  transition: border-color $transition-fast;
+
+  &:focus-within {
+    border-color: $color-brand-primary;
+  }
+}
+
+.icon {
+  color: $color-text-secondary;
+  flex-shrink: 0;
+}
+
+.input {
+  width: 100%;
+  font-size: $fs-sm;
+  color: $color-text-primary;
+
+  &::placeholder {
+    color: $color-gray-300;
+  }
+}

@@ -1,0 +1,33 @@
+@use '@/styles/abstracts' as *;
+
+.inner {
+  text-align: center;
+  max-width: $max-width-prose;
+}
+
+.title {
+  margin-bottom: $space-sm;
+}
+
+.subtitle {
+  color: rgba($color-white-pure, $opacity-9);
+  margin-bottom: $space-lg;
+}
+
+.actions {
+  @include flex(row, center, center, $space-sm);
+  flex-wrap: wrap;
+}
+
+// El botón secundario global asume texto oscuro sobre fondo claro; aquí el
+// fondo es el degradado oscuro de .section--dark. Selector compuesto
+// (:global(.btn--secondary) + clase local) para ganar siempre la cascada,
+// sin depender del orden de generación del CSS.
+:global(.btn--secondary).secondaryBtn {
+  color: $color-white-pure;
+  border-color: rgba($color-white-pure, $opacity-6);
+
+  &:hover {
+    border-color: $color-white-pure;
+  }
+}

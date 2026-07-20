@@ -1,0 +1,48 @@
+@use '@/styles/abstracts' as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-xs;
+  padding: 0.9rem $space-7;
+  font-size: $fs-sm;
+  font-weight: $fw-semibold;
+  letter-spacing: 0.01em;
+  border-radius: $radius-pill;
+  @include transition(transform box-shadow background-color border-color, $transition-fast);
+  white-space: nowrap;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.btn--primary {
+  background: linear-gradient(135deg, $color-fucsia, $color-fucsia-dark);
+  color: $color-white-pure;
+  box-shadow: $shadow-brand-glow;
+}
+
+.btn--secondary {
+  background: transparent;
+  color: $color-text-primary;
+  border: 1px solid $color-silver-dark;
+
+  &:hover {
+    border-color: $color-silver;
+  }
+}
+
+.btn--ghost {
+  background: transparent;
+  color: $color-text-secondary;
+
+  &:hover {
+    color: $color-text-primary;
+  }
+}

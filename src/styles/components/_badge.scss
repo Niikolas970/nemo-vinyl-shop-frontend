@@ -1,0 +1,60 @@
+@use '@/styles/abstracts' as *;
+
+.badge {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.3rem 0.85rem;
+  border-radius: $radius-pill;
+  font-size: $fs-xs;
+  font-weight: $fw-semibold;
+  background-color: $color-bone-alt;
+  color: $color-text-secondary;
+}
+
+.badge--success {
+  color: $color-success;
+  background-color: rgba($color-success, $opacity-tint);
+}
+
+.badge--warning {
+  color: $color-warning;
+  background-color: rgba($color-warning, $opacity-tint);
+}
+
+.badge--danger {
+  color: $color-danger;
+  background-color: rgba($color-danger, $opacity-tint);
+}
+
+.tag {
+  font-size: $fs-xs;
+  padding: 0.3rem 0.7rem;
+  border-radius: $radius-pill;
+  background-color: $color-bone-alt;
+  color: $color-text-secondary;
+}
+
+.chip {
+  padding: 0.55rem $space-md;
+  border-radius: $radius-pill;
+  font-size: $fs-sm;
+  font-weight: $fw-medium;
+  color: $color-text-secondary;
+  background-color: $color-surface;
+  border: 1px solid $color-border;
+  transition:
+    color $transition-fast,
+    border-color $transition-fast,
+    background-color $transition-fast;
+
+  &:hover {
+    color: $color-text-primary;
+    border-color: $color-silver;
+  }
+}
+
+.chip--active {
+  color: $color-white-pure;
+  background-color: $color-brand-primary;
+  border-color: $color-brand-primary;
+}

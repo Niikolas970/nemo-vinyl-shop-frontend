@@ -1,0 +1,10 @@
+@use '@/styles/abstracts' as *;
+
+.card {
+  @include surface-base;
+  border-radius: $radius-lg;
+}
+
+.card--interactive {
+  @include hover-lift;
+}

@@ -1,0 +1,20 @@
+@use '@/styles/abstracts' as *;
+
+.section {
+  @include section-spacing;
+}
+
+.section--light {
+  background-color: $color-bone-alt;
+}
+
+.section--dark {
+  background: linear-gradient(135deg, $color-fucsia-dark, $color-purple 85%);
+  color: $color-white-pure;
+
+  h1,
+  h2,
+  h3 {
+    color: inherit;
+  }
+}

@@ -1,0 +1,20 @@
+@use '@/styles/abstracts' as *;
+
+.badge {
+  @include flex(row, center, flex-start, $space-xs);
+  padding: $space-sm $space-md;
+  border-radius: $radius-md;
+  font-size: $fs-sm;
+  font-weight: $fw-medium;
+  color: $color-text-primary;
+  transition: border-color $transition-fast;
+
+  &:hover {
+    border-color: $color-brand-primary;
+  }
+
+  svg {
+    color: $color-brand-primary;
+    flex-shrink: 0;
+  }
+}

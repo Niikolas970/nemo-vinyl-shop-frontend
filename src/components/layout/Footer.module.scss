@@ -1,0 +1,93 @@
+@use '@/styles/abstracts' as *;
+
+.footer {
+  border-top: 1px solid $color-border;
+  background-color: $color-bg-elevated;
+  padding-top: $space-xl;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: $space-lg;
+  padding-bottom: $space-lg;
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: $space-md;
+  }
+}
+
+.brand {
+  font-weight: $fw-bold;
+  color: $color-text-primary;
+}
+
+.tagline {
+  margin-top: $space-xs;
+  max-width: 24rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $space-xs;
+
+  a {
+    font-size: $fs-sm;
+    color: $color-text-secondary;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: $color-brand-primary;
+    }
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+}
+
+.infoRow {
+  @include flex(row, center, flex-start, $space-xs);
+  font-size: $fs-sm;
+  color: $color-text-secondary;
+
+  svg {
+    flex-shrink: 0;
+    color: $color-brand-primary;
+  }
+}
+
+.social {
+  @include flex(row, center, flex-start, $space-sm);
+
+  a {
+    @include flex(row, center, center);
+    width: 40px;
+    height: 40px;
+    border-radius: $radius-full;
+    border: 1px solid $color-border;
+    color: $color-text-secondary;
+    transition: color $transition-fast, border-color $transition-fast;
+
+    &:hover {
+      color: $color-brand-primary;
+      border-color: $color-brand-primary;
+    }
+  }
+}
+
+.copy {
+  text-align: center;
+  font-size: $fs-xs;
+  padding-block: $space-sm;
+  border-top: 1px solid $color-border;
+}

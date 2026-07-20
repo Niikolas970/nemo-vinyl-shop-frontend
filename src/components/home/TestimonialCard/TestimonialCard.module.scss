@@ -1,0 +1,59 @@
+@use '@/styles/abstracts' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+  padding: $space-lg;
+}
+
+.stars {
+  @include flex(row, center, flex-start, 2px);
+}
+
+.filled {
+  color: $color-brand-primary;
+  fill: $color-brand-primary;
+}
+
+.empty {
+  color: $color-gray-200;
+}
+
+.comment {
+  color: $color-text-primary;
+  font-style: italic;
+}
+
+.author {
+  @include flex(row, center, flex-start, $space-xs);
+  margin-top: auto;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: $radius-full;
+  object-fit: cover;
+}
+
+.avatarIcon {
+  @include flex(row, center, center);
+  width: 40px;
+  height: 40px;
+  border-radius: $radius-full;
+  background-color: $color-bone-alt;
+  color: $color-text-secondary;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.name {
+  font-weight: $fw-semibold;
+  font-size: $fs-sm;
+}
+
+.city {
+  font-size: $fs-xs;
+  color: $color-text-secondary;
+}

@@ -1,0 +1,41 @@
+@use '@/styles/abstracts' as *;
+
+.shadow {
+  box-shadow: $shadow-soft;
+}
+
+.shadow-lg {
+  box-shadow: $shadow-elevated;
+}
+
+.radius {
+  border-radius: $radius-md;
+}
+
+.radius-lg {
+  border-radius: $radius-lg;
+}
+
+.surface {
+  @include surface-base;
+}
+
+.glass {
+  @include glass;
+}
+
+// No usa el mixin fade-in: este archivo es CSS global (no .module.scss),
+// donde el escape global() de fade-in no aplica y quedaría como valor inválido.
+.fade {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: $duration-slower;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.divider {
+  height: 1px;
+  border: none;
+  background-color: $color-border;
+}

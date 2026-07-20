@@ -1,0 +1,39 @@
+@use '@/styles/abstracts' as *;
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+}
+
+.item {
+  border-radius: $radius-md;
+  background-color: $color-surface;
+  border: 1px solid $color-border;
+  overflow: hidden;
+}
+
+.trigger {
+  @include flex(row, center, space-between);
+  width: 100%;
+  padding: $space-md;
+  text-align: left;
+  font-weight: $fw-semibold;
+  color: $color-text-primary;
+}
+
+.icon {
+  flex-shrink: 0;
+  color: $color-brand-primary;
+  transition: transform $transition-fast;
+}
+
+.open {
+  transform: rotate(180deg);
+}
+
+.content {
+  @include fade-in(300ms);
+  padding: 0 $space-md $space-md;
+  font-size: $fs-sm;
+}

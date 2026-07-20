@@ -1,0 +1,30 @@
+@use '@/styles/abstracts' as *;
+
+.section {
+  background-color: $color-bg-elevated;
+}
+
+.list {
+  @include flex(row, center, center, $space-lg);
+  flex-wrap: wrap;
+
+  @include mobile {
+    gap: $space-sm;
+  }
+}
+
+.item {
+  @include flex(row, center, center, $space-xs);
+  padding: $space-sm $space-md;
+  border-radius: $radius-full;
+  border: 1px solid $color-border;
+  color: $color-text-secondary;
+  font-size: $fs-sm;
+  font-weight: $fw-medium;
+  transition: border-color $transition-fast, color $transition-fast;
+
+  &:hover {
+    border-color: $color-brand-primary;
+    color: $color-text-primary;
+  }
+}

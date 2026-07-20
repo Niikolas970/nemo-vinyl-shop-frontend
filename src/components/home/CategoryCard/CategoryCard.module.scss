@@ -1,0 +1,25 @@
+@use '@/styles/abstracts' as *;
+
+.card {
+  display: block;
+  padding: $space-lg;
+}
+
+.iconWrapper {
+  @include flex(row, center, center);
+  width: 52px;
+  height: 52px;
+  margin-bottom: $space-md;
+  border-radius: $radius-md;
+  background: linear-gradient(135deg, rgba($color-fucsia, $opacity-5), rgba($color-fucsia, $opacity-0));
+  color: $color-brand-primary;
+}
+
+.title {
+  margin-bottom: $space-xs;
+  font-size: $fs-md;
+}
+
+.description {
+  font-size: $fs-sm;
+}

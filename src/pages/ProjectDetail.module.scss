@@ -1,0 +1,20 @@
+@use '@/styles/abstracts' as *;
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $space-xl;
+  padding-block: $space-xl;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+}
+
+.related {
+  margin-top: $space-2xl;
+
+  h2 {
+    margin-bottom: $space-md;
+  }
+}

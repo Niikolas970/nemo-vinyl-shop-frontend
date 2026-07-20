@@ -1,0 +1,126 @@
+@use 'sass:list';
+@use 'variables' as *;
+@use 'breakpoints' as *;
+
+// Desktop first: el contenido por defecto es desktop, estos mixins acotan hacia abajo.
+@mixin tablet {
+  @media (max-width: $bp-tablet) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $bp-mobile) {
+    @content;
+  }
+}
+
+@mixin flex($direction: row, $align: center, $justify: flex-start, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+@mixin flex-center($gap: 0) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+}
+
+@mixin flex-between($align: center, $gap: 0) {
+  display: flex;
+  align-items: $align;
+  justify-content: space-between;
+  gap: $gap;
+}
+
+// Uso: @include transition(transform box-shadow);
+@mixin transition($properties: transform, $duration: $transition-normal) {
+  $list: ();
+
+  @each $property in $properties {
+    $list: list.append($list, $property $duration, comma);
+  }
+
+  transition: $list;
+}
+
+@mixin glass {
+  background: rgba($color-white-pure, $opacity-8);
+  backdrop-filter: blur($blur-md);
+  -webkit-backdrop-filter: blur($blur-md);
+  border: 1px solid $color-border;
+}
+
+@mixin container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin-inline: auto;
+  padding-inline: $space-lg;
+
+  @include tablet {
+    padding-inline: $space-md;
+  }
+
+  @include mobile {
+    padding-inline: $space-sm;
+  }
+}
+
+// Alias semántico de @include container.
+@mixin responsive-container {
+  @include container;
+}
+
+@mixin section-spacing {
+  padding-block: $space-2xl;
+
+  @include tablet {
+    padding-block: $space-xl;
+  }
+
+  @include mobile {
+    padding-block: $space-lg;
+  }
+}
+
+// Animaciones de entrada. Las keyframes viven en styles/base/_global.scss.
+@mixin fade-in-up($duration: $duration-slower, $delay: 0ms) {
+  opacity: 0;
+  animation-name: global(fadeInUp);
+  animation-duration: $duration;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-delay: $delay;
+}
+
+@mixin fade-in($duration: $duration-slower, $delay: 0ms) {
+  opacity: 0;
+  animation-name: global(fadeIn);
+  animation-duration: $duration;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-delay: $delay;
+}
+
+@mixin surface-base {
+  background-color: $color-surface;
+  border: 1px solid $color-border;
+}
+
+// Alias semántico de @include surface-base.
+@mixin surface {
+  @include surface-base;
+}
+
+@mixin hover-lift {
+  transition: transform $transition-base, box-shadow $transition-base, border-color $transition-base;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: $shadow-elevated;
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Nemo Vinyl Art",
+  "short_name": "Nemo Vinyl Art",
+  "description": "Vinilos, PPF y acabados premium para motos, carros, empresas y hogar.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8f6f3",
+  "theme_color": "#ff2e88",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

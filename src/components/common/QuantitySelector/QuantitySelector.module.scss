@@ -1,0 +1,35 @@
+@use '@/styles/abstracts' as *;
+
+.selector {
+  @include flex(row, center, space-between, $space-sm);
+  width: fit-content;
+  border: 1px solid $color-border;
+  border-radius: $radius-full;
+  padding: $space-xs;
+}
+
+.button {
+  @include flex(row, center, center);
+  width: 36px;
+  height: 36px;
+  border-radius: $radius-full;
+  color: $color-text-primary;
+  background-color: $color-bone-alt;
+  transition: background-color $transition-fast;
+
+  &:hover {
+    background-color: $color-gray-200;
+  }
+}
+
+.value {
+  min-width: 6rem;
+  text-align: center;
+  font-weight: $fw-semibold;
+}
+
+.unit {
+  font-weight: $fw-regular;
+  color: $color-text-secondary;
+  font-size: $fs-sm;
+}

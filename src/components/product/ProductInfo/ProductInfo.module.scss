@@ -1,0 +1,59 @@
+@use '@/styles/abstracts' as *;
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+}
+
+.category {
+  font-size: $fs-xs;
+  font-weight: $fw-semibold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $color-brand-primary;
+}
+
+.title {
+  margin: 0;
+}
+
+.price {
+  font-size: $fs-xl;
+  font-weight: $fw-bold;
+}
+
+.unit {
+  font-size: $fs-sm;
+  font-weight: $fw-regular;
+  color: $color-text-secondary;
+}
+
+.description {
+  margin-top: $space-xs;
+}
+
+.tags {
+  @include flex(row, center, flex-start, $space-xs);
+  flex-wrap: wrap;
+}
+
+.specs {
+  margin-top: $space-sm;
+  border-top: 1px solid $color-border;
+}
+
+.specRow {
+  @include flex(row, center, space-between);
+  padding-block: $space-xs;
+  border-bottom: 1px solid $color-border;
+  font-size: $fs-sm;
+
+  dt {
+    color: $color-text-secondary;
+  }
+
+  dd {
+    font-weight: $fw-medium;
+  }
+}

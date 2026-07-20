@@ -1,0 +1,29 @@
+@use '@/styles/abstracts' as *;
+
+.section-title {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+  margin-bottom: $space-lg;
+
+  &.section-title--center {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.section-title__eyebrow {
+  font-size: $fs-sm;
+  font-weight: $fw-semibold;
+  letter-spacing: $ls-wider;
+  text-transform: uppercase;
+  color: $color-brand-primary;
+}
+
+.section-title__title {
+  margin: 0;
+}
+
+.section-title__description {
+  max-width: $max-width-prose;
+}

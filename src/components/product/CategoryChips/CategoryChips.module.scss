@@ -1,0 +1,6 @@
+@use '@/styles/abstracts' as *;
+
+.chips {
+  @include flex(row, center, flex-start, $space-xs);
+  flex-wrap: wrap;
+}
