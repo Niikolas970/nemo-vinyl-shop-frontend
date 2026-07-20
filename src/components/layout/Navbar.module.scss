@@ -1,5 +1,8 @@
 @use '@/styles/abstracts' as *;
 
+// Punto de corte propio del menú móvil (no existe en _breakpoints.scss).
+$bp-nav: 768px;
+
 .navbar {
   @include flex(row, center, flex-end, $space-lg);
 }
@@ -7,13 +10,17 @@
 .list {
   @include flex(row, center, center, $space-lg);
 
-  @include mobile {
+  @media (max-width: $bp-nav) {
     display: none;
   }
 }
 
 .cta {
   padding: 0.65rem 1.5rem;
+
+  @media (max-width: $bp-nav) {
+    display: none;
+  }
 }
 
 .link {
@@ -29,4 +36,19 @@
 
 .active {
   color: $color-brand-primary;
+}
+
+.toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: $color-text-primary;
+  cursor: pointer;
+  padding: $space-1;
+
+  @media (max-width: $bp-nav) {
+    display: flex;
+  }
 }

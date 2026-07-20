@@ -1,0 +1,45 @@
+@use '@/styles/abstracts' as *;
+
+.panel {
+  @include glass;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: min(80vw, 320px);
+  padding: $space-11 $space-lg $space-lg;
+  transform: translateX(100%);
+  transition: transform $transition-normal;
+  z-index: $z-modal;
+  overflow-y: auto;
+}
+
+.open {
+  transform: translateX(0);
+}
+
+.list {
+  @include flex(column, flex-start, flex-start, $space-lg);
+}
+
+.link {
+  font-size: $fs-md;
+  font-weight: $fw-medium;
+  color: $color-text-secondary;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $color-text-primary;
+  }
+}
+
+.active {
+  color: $color-brand-primary;
+}
+
+.cta {
+  display: inline-block;
+  font-size: $fs-md;
+  font-weight: $fw-semibold;
+  color: $color-brand-primary;
+}
